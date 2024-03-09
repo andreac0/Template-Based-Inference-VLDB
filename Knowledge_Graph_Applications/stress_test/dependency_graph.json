@@ -1,0 +1,17 @@
+[{"sources":"[]","type":"FactInputPlan","atom":"shock","plan":"Facts for shock"}
+,{"sources":"[]","type":"FactInputPlan","atom":"finInt","plan":"Facts for finInt"}
+,{"sources":"[Facts for shock, Facts for finInt]","type":"JoinPlan","atom":"default","plan":"default(X) :- shock(X,S), finInt(X,P), P<S."}
+,{"sources":"[]","type":"FactInputPlan","atom":"longTerm","plan":"Facts for longTerm"}
+,{"sources":"[default(X) :- shock(X,S), finInt(X,P), P<S., Facts for longTerm]","type":"JoinPlan","atom":"risk_one","plan":"risk_one(C,VL,TL) :- default(X), longTerm(X,C,VL,TL)."}
+,{"sources":"[]","type":"FactInputPlan","atom":"shortTerm","plan":"Facts for shortTerm"}
+,{"sources":"[default(X) :- shock(X,S), finInt(X,P), P<S., Facts for shortTerm]","type":"JoinPlan","atom":"risk_one","plan":"risk_one(C,VS,TS) :- default(X), shortTerm(X,C,VS,TS)."}
+,{"sources":"[risk_one(C,VL,TL) :- default(X), longTerm(X,C,VL,TL)., risk_one(C,VS,TS) :- default(X), shortTerm(X,C,VS,TS).]","type":"LinearPlan","atom":"total_risk","plan":"total_risk(C,E) :- risk_one(C,E,T)."}
+,{"sources":"[default(X) :- shock(X,S), finInt(X,P), P<S., Facts for longTerm]","type":"JoinPlan","atom":"vatom_1","plan":"vatom_1(C,TL,VL,DL) :- default(DL), longTerm(DL,C,VL,TL)."}
+,{"sources":"[vatom_1(C,TL,VL,DL) :- default(DL), longTerm(DL,C,VL,TL).]","type":"LinearPlan","atom":"risk","plan":"risk(C,EL,TL) :- vatom_1(C,TL,VL,DL), EL=msum(VL,<DL>)."}
+,{"sources":"[default(X) :- shock(X,S), finInt(X,P), P<S., Facts for shortTerm]","type":"JoinPlan","atom":"vatom_2","plan":"vatom_2(C,TS,VS,DS) :- default(DS), shortTerm(DS,C,VS,TS)."}
+,{"sources":"[vatom_2(C,TS,VS,DS) :- default(DS), shortTerm(DS,C,VS,TS).]","type":"LinearPlan","atom":"risk","plan":"risk(C,ES,TS) :- vatom_2(C,TS,VS,DS), ES=msum(VS,<DS>)."}
+,{"sources":"[risk(C,EL,TL) :- vatom_1(C,TL,VL,DL), EL=msum(VL,<DL>)., risk(C,ES,TS) :- vatom_2(C,TS,VS,DS), ES=msum(VS,<DS>).]","type":"LinearPlan","atom":"total_risk","plan":"total_risk(C,B) :- risk(C,E,T), B=msum(E,<T>)."}
+,{"sources":"[risk_one(C,VL,TL) :- default(X), longTerm(X,C,VL,TL)., risk_one(C,VS,TS) :- default(X), shortTerm(X,C,VS,TS).]","type":"LinearPlan","atom":"total_risk","plan":"total_risk(C,B) :- risk_one(C,E,T), B=msum(E,<T>)."}
+,{"sources":"[total_risk(C,E) :- risk_one(C,E,T)., total_risk(C,B) :- risk(C,E,T), B=msum(E,<T>)., total_risk(C,B) :- risk_one(C,E,T), B=msum(E,<T>)., Facts for finInt]","type":"JoinPlan","atom":"default","plan":"default(C) :- total_risk(C,B), finInt(C,R), B>R."}
+,{"sources":"[default(X) :- shock(X,S), finInt(X,P), P<S., default(C) :- total_risk(C,B), finInt(C,R), B>R.]","type":"OutputPlan","atom":"default","plan":"default"}
+]

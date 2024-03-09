@@ -1,0 +1,9 @@
+[{"sources":"[]","type":"FactInputPlan","atom":"company","plan":"Facts for company"}
+,{"sources":"[Facts for company]","type":"LinearPlan","atom":"control","plan":"control(X,X) :- company(X)."}
+,{"sources":"[]","type":"FactInputPlan","atom":"own","plan":"Facts for own"}
+,{"sources":"[Facts for company, Facts for own]","type":"JoinPlan","atom":"control","plan":"control(X,J) :- company(X), own(X,J,W), W>50."}
+,{"sources":"[control(X,X) :- company(X)., control(X,J) :- company(X), own(X,J,W), W>50., Facts for own]","type":"JoinPlan","atom":"vatom_1","plan":"vatom_1(X,Y,Z,K) :- control(X,Z), own(Z,Y,K)."}
+,{"sources":"[vatom_1(X,Y,Z,K) :- control(X,Z), own(Z,Y,K).]","type":"LinearPlan","atom":"jointcontrol","plan":"jointcontrol(X,Y,TS) :- vatom_1(X,Y,Z,K), TS=msum(K,<Z>)."}
+,{"sources":"[jointcontrol(X,Y,TS) :- vatom_1(X,Y,Z,K), TS=msum(K,<Z>).]","type":"LinearPlan","atom":"control","plan":"control(X,Y) :- jointcontrol(X,Y,TS), TS>50."}
+,{"sources":"[control(X,X) :- company(X)., control(X,Y) :- jointcontrol(X,Y,TS), TS>50., control(X,J) :- company(X), own(X,J,W), W>50.]","type":"OutputPlan","atom":"control","plan":"control"}
+]

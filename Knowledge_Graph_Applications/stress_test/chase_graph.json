@@ -1,0 +1,145 @@
+[{"name":"shock(BankAmerica,15)","pattern":"shock(1,2)","provenance":"[]","rule":null}
+,{"name":"default01875977346(BankAmerica,15)","pattern":"default01875977346(1,2)","provenance":"[shock(BankAmerica,15)]","rule":null}
+,{"name":"finInt(BankAmerica,5)","pattern":"finInt(1,2)","provenance":"[]","rule":null}
+,{"name":"default11875977346(BankAmerica,5)","pattern":"default11875977346(1,2)","provenance":"[finInt(BankAmerica,5)]","rule":null}
+,{"name":"default(BankAmerica)","pattern":"default(1)","provenance":"[default01875977346(BankAmerica,15), default11875977346(BankAmerica,5)]","rule":"default(X) :- shock(X,S), finInt(X,P), P<S."}
+,{"name":"finInt(CreditFrance,3)","pattern":"finInt(1,2)","provenance":"[]","rule":null}
+,{"name":"default11875977346(CreditFrance,3)","pattern":"default11875977346(1,2)","provenance":"[finInt(CreditFrance,3)]","rule":null}
+,{"name":"finInt(GermanBank,4)","pattern":"finInt(1,2)","provenance":"[]","rule":null}
+,{"name":"default11875977346(GermanBank,4)","pattern":"default11875977346(1,2)","provenance":"[finInt(GermanBank,4)]","rule":null}
+,{"name":"finInt(ItalyCredit,30)","pattern":"finInt(1,2)","provenance":"[]","rule":null}
+,{"name":"default11875977346(ItalyCredit,30)","pattern":"default11875977346(1,2)","provenance":"[finInt(ItalyCredit,30)]","rule":null}
+,{"name":"finInt(DutchInvest,47)","pattern":"finInt(1,2)","provenance":"[]","rule":null}
+,{"name":"default11875977346(DutchInvest,47)","pattern":"default11875977346(1,2)","provenance":"[finInt(DutchInvest,47)]","rule":null}
+,{"name":"finInt(USAplc,34)","pattern":"finInt(1,2)","provenance":"[]","rule":null}
+,{"name":"default11875977346(USAplc,34)","pattern":"default11875977346(1,2)","provenance":"[finInt(USAplc,34)]","rule":null}
+,{"name":"finInt(DanishCred,16)","pattern":"finInt(1,2)","provenance":"[]","rule":null}
+,{"name":"default11875977346(DanishCred,16)","pattern":"default11875977346(1,2)","provenance":"[finInt(DanishCred,16)]","rule":null}
+,{"name":"finInt(PolishBank,40)","pattern":"finInt(1,2)","provenance":"[]","rule":null}
+,{"name":"default11875977346(PolishBank,40)","pattern":"default11875977346(1,2)","provenance":"[finInt(PolishBank,40)]","rule":null}
+,{"name":"finInt(KPC,17)","pattern":"finInt(1,2)","provenance":"[]","rule":null}
+,{"name":"default11875977346(KPC,17)","pattern":"default11875977346(1,2)","provenance":"[finInt(KPC,17)]","rule":null}
+,{"name":"risk_one0887762042(BankAmerica)","pattern":"risk_one0887762042(1)","provenance":"[default(BankAmerica)]","rule":null}
+,{"name":"longTerm(BankAmerica,CreditFrance,7,long)","pattern":"longTerm(1,2,3,4)","provenance":"[]","rule":null}
+,{"name":"risk_one1887762042(BankAmerica,CreditFrance,7,long)","pattern":"risk_one1887762042(1,2,3,4)","provenance":"[longTerm(BankAmerica,CreditFrance,7,long)]","rule":null}
+,{"name":"risk_one(CreditFrance,7,long)","pattern":"risk_one(1,2,3)","provenance":"[risk_one0887762042(BankAmerica), risk_one1887762042(BankAmerica,CreditFrance,7,long)]","rule":"risk_one(C,VL,TL) :- default(X), longTerm(X,C,VL,TL)."}
+,{"name":"total_risk(CreditFrance,7)","pattern":"total_risk(1,2)","provenance":"[risk_one(CreditFrance,7,long)]","rule":"total_risk(C,E) :- risk_one(C,E,T)."}
+,{"name":"default0252051809(CreditFrance,7)","pattern":"default0252051809(1,2)","provenance":"[total_risk(CreditFrance,7)]","rule":null}
+,{"name":"default1252051809(BankAmerica,5)","pattern":"default1252051809(1,2)","provenance":"[finInt(BankAmerica,5)]","rule":null}
+,{"name":"default1252051809(CreditFrance,3)","pattern":"default1252051809(1,2)","provenance":"[finInt(CreditFrance,3)]","rule":null}
+,{"name":"default(CreditFrance)","pattern":"default(1)","provenance":"[default0252051809(CreditFrance,7), default1252051809(CreditFrance,3)]","rule":"default(C) :- total_risk(C,B), finInt(C,R), B>R."}
+,{"name":"default1252051809(GermanBank,4)","pattern":"default1252051809(1,2)","provenance":"[finInt(GermanBank,4)]","rule":null}
+,{"name":"default1252051809(ItalyCredit,30)","pattern":"default1252051809(1,2)","provenance":"[finInt(ItalyCredit,30)]","rule":null}
+,{"name":"default1252051809(DutchInvest,47)","pattern":"default1252051809(1,2)","provenance":"[finInt(DutchInvest,47)]","rule":null}
+,{"name":"default1252051809(USAplc,34)","pattern":"default1252051809(1,2)","provenance":"[finInt(USAplc,34)]","rule":null}
+,{"name":"default1252051809(DanishCred,16)","pattern":"default1252051809(1,2)","provenance":"[finInt(DanishCred,16)]","rule":null}
+,{"name":"default1252051809(PolishBank,40)","pattern":"default1252051809(1,2)","provenance":"[finInt(PolishBank,40)]","rule":null}
+,{"name":"default1252051809(KPC,17)","pattern":"default1252051809(1,2)","provenance":"[finInt(KPC,17)]","rule":null}
+,{"name":"longTerm(SpanishBanco,DutchInvest,29,long)","pattern":"longTerm(1,2,3,4)","provenance":"[]","rule":null}
+,{"name":"risk_one1887762042(SpanishBanco,DutchInvest,29,long)","pattern":"risk_one1887762042(1,2,3,4)","provenance":"[longTerm(SpanishBanco,DutchInvest,29,long)]","rule":null}
+,{"name":"longTerm(CreditFrance,USAplc,39,long)","pattern":"longTerm(1,2,3,4)","provenance":"[]","rule":null}
+,{"name":"risk_one1887762042(CreditFrance,USAplc,39,long)","pattern":"risk_one1887762042(1,2,3,4)","provenance":"[longTerm(CreditFrance,USAplc,39,long)]","rule":null}
+,{"name":"longTerm(GermanBank,PolishBank,33,long)","pattern":"longTerm(1,2,3,4)","provenance":"[]","rule":null}
+,{"name":"risk_one1887762042(GermanBank,PolishBank,33,long)","pattern":"risk_one1887762042(1,2,3,4)","provenance":"[longTerm(GermanBank,PolishBank,33,long)]","rule":null}
+,{"name":"risk_one0887762042(CreditFrance)","pattern":"risk_one0887762042(1)","provenance":"[default(CreditFrance)]","rule":null}
+,{"name":"risk_one(USAplc,39,long)","pattern":"risk_one(1,2,3)","provenance":"[risk_one0887762042(CreditFrance), risk_one1887762042(CreditFrance,USAplc,39,long)]","rule":"risk_one(C,VL,TL) :- default(X), longTerm(X,C,VL,TL)."}
+,{"name":"total_risk(USAplc,39)","pattern":"total_risk(1,2)","provenance":"[risk_one(USAplc,39,long)]","rule":"total_risk(C,E) :- risk_one(C,E,T)."}
+,{"name":"default0252051809(USAplc,39)","pattern":"default0252051809(1,2)","provenance":"[total_risk(USAplc,39)]","rule":null}
+,{"name":"default(USAplc)","pattern":"default(1)","provenance":"[default0252051809(USAplc,39), default1252051809(USAplc,34)]","rule":"default(C) :- total_risk(C,B), finInt(C,R), B>R."}
+,{"name":"risk_one0887762042(USAplc)","pattern":"risk_one0887762042(1)","provenance":"[default(USAplc)]","rule":null}
+,{"name":"risk_one0198717071(BankAmerica)","pattern":"risk_one0198717071(1)","provenance":"[default(BankAmerica)]","rule":null}
+,{"name":"shortTerm(BankAmerica,GermanBank,6,short)","pattern":"shortTerm(1,2,3,4)","provenance":"[]","rule":null}
+,{"name":"risk_one1198717071(BankAmerica,GermanBank,6,short)","pattern":"risk_one1198717071(1,2,3,4)","provenance":"[shortTerm(BankAmerica,GermanBank,6,short)]","rule":null}
+,{"name":"risk_one(GermanBank,6,short)","pattern":"risk_one(1,2,3)","provenance":"[risk_one0198717071(BankAmerica), risk_one1198717071(BankAmerica,GermanBank,6,short)]","rule":"risk_one(C,VS,TS) :- default(X), shortTerm(X,C,VS,TS)."}
+,{"name":"total_risk(GermanBank,6)","pattern":"total_risk(1,2)","provenance":"[risk_one(GermanBank,6,short)]","rule":"total_risk(C,E) :- risk_one(C,E,T)."}
+,{"name":"default0252051809(GermanBank,6)","pattern":"default0252051809(1,2)","provenance":"[total_risk(GermanBank,6)]","rule":null}
+,{"name":"default(GermanBank)","pattern":"default(1)","provenance":"[default0252051809(GermanBank,6), default1252051809(GermanBank,4)]","rule":"default(C) :- total_risk(C,B), finInt(C,R), B>R."}
+,{"name":"shortTerm(BankAmerica,ItalyCredit,21,short)","pattern":"shortTerm(1,2,3,4)","provenance":"[]","rule":null}
+,{"name":"risk_one1198717071(BankAmerica,ItalyCredit,21,short)","pattern":"risk_one1198717071(1,2,3,4)","provenance":"[shortTerm(BankAmerica,ItalyCredit,21,short)]","rule":null}
+,{"name":"risk_one(ItalyCredit,21,short)","pattern":"risk_one(1,2,3)","provenance":"[risk_one0198717071(BankAmerica), risk_one1198717071(BankAmerica,ItalyCredit,21,short)]","rule":"risk_one(C,VS,TS) :- default(X), shortTerm(X,C,VS,TS)."}
+,{"name":"total_risk(ItalyCredit,21)","pattern":"total_risk(1,2)","provenance":"[risk_one(ItalyCredit,21,short)]","rule":"total_risk(C,E) :- risk_one(C,E,T)."}
+,{"name":"default0252051809(ItalyCredit,21)","pattern":"default0252051809(1,2)","provenance":"[total_risk(ItalyCredit,21)]","rule":null}
+,{"name":"shortTerm(SpanishBanco,ItalyCredit,15,short)","pattern":"shortTerm(1,2,3,4)","provenance":"[]","rule":null}
+,{"name":"risk_one1198717071(SpanishBanco,ItalyCredit,15,short)","pattern":"risk_one1198717071(1,2,3,4)","provenance":"[shortTerm(SpanishBanco,ItalyCredit,15,short)]","rule":null}
+,{"name":"shortTerm(BankAmerica,DutchInvest,26,short)","pattern":"shortTerm(1,2,3,4)","provenance":"[]","rule":null}
+,{"name":"risk_one1198717071(BankAmerica,DutchInvest,26,short)","pattern":"risk_one1198717071(1,2,3,4)","provenance":"[shortTerm(BankAmerica,DutchInvest,26,short)]","rule":null}
+,{"name":"risk_one(DutchInvest,26,short)","pattern":"risk_one(1,2,3)","provenance":"[risk_one0198717071(BankAmerica), risk_one1198717071(BankAmerica,DutchInvest,26,short)]","rule":"risk_one(C,VS,TS) :- default(X), shortTerm(X,C,VS,TS)."}
+,{"name":"total_risk(DutchInvest,26)","pattern":"total_risk(1,2)","provenance":"[risk_one(DutchInvest,26,short)]","rule":"total_risk(C,E) :- risk_one(C,E,T)."}
+,{"name":"default0252051809(DutchInvest,26)","pattern":"default0252051809(1,2)","provenance":"[total_risk(DutchInvest,26)]","rule":null}
+,{"name":"shortTerm(USAplc,DanishCred,20,short)","pattern":"shortTerm(1,2,3,4)","provenance":"[]","rule":null}
+,{"name":"risk_one1198717071(USAplc,DanishCred,20,short)","pattern":"risk_one1198717071(1,2,3,4)","provenance":"[shortTerm(USAplc,DanishCred,20,short)]","rule":null}
+,{"name":"shortTerm(USAplc,PolishBank,18,short)","pattern":"shortTerm(1,2,3,4)","provenance":"[]","rule":null}
+,{"name":"risk_one1198717071(USAplc,PolishBank,18,short)","pattern":"risk_one1198717071(1,2,3,4)","provenance":"[shortTerm(USAplc,PolishBank,18,short)]","rule":null}
+,{"name":"shortTerm(PolishBank,KPC,23,short)","pattern":"shortTerm(1,2,3,4)","provenance":"[]","rule":null}
+,{"name":"risk_one1198717071(PolishBank,KPC,23,short)","pattern":"risk_one1198717071(1,2,3,4)","provenance":"[shortTerm(PolishBank,KPC,23,short)]","rule":null}
+,{"name":"risk_one0198717071(CreditFrance)","pattern":"risk_one0198717071(1)","provenance":"[default(CreditFrance)]","rule":null}
+,{"name":"risk_one0198717071(USAplc)","pattern":"risk_one0198717071(1)","provenance":"[default(USAplc)]","rule":null}
+,{"name":"risk_one(DanishCred,20,short)","pattern":"risk_one(1,2,3)","provenance":"[risk_one0198717071(USAplc), risk_one1198717071(USAplc,DanishCred,20,short)]","rule":"risk_one(C,VS,TS) :- default(X), shortTerm(X,C,VS,TS)."}
+,{"name":"total_risk(DanishCred,20)","pattern":"total_risk(1,2)","provenance":"[risk_one(DanishCred,20,short)]","rule":"total_risk(C,E) :- risk_one(C,E,T)."}
+,{"name":"default0252051809(DanishCred,20)","pattern":"default0252051809(1,2)","provenance":"[total_risk(DanishCred,20)]","rule":null}
+,{"name":"default(DanishCred)","pattern":"default(1)","provenance":"[default0252051809(DanishCred,20), default1252051809(DanishCred,16)]","rule":"default(C) :- total_risk(C,B), finInt(C,R), B>R."}
+,{"name":"risk_one(PolishBank,18,short)","pattern":"risk_one(1,2,3)","provenance":"[risk_one0198717071(USAplc), risk_one1198717071(USAplc,PolishBank,18,short)]","rule":"risk_one(C,VS,TS) :- default(X), shortTerm(X,C,VS,TS)."}
+,{"name":"total_risk(PolishBank,18)","pattern":"total_risk(1,2)","provenance":"[risk_one(PolishBank,18,short)]","rule":"total_risk(C,E) :- risk_one(C,E,T)."}
+,{"name":"default0252051809(PolishBank,18)","pattern":"default0252051809(1,2)","provenance":"[total_risk(PolishBank,18)]","rule":null}
+,{"name":"risk_one0198717071(GermanBank)","pattern":"risk_one0198717071(1)","provenance":"[default(GermanBank)]","rule":null}
+,{"name":"risk_one0198717071(DanishCred)","pattern":"risk_one0198717071(1)","provenance":"[default(DanishCred)]","rule":null}
+,{"name":"risk_one0887762042(GermanBank)","pattern":"risk_one0887762042(1)","provenance":"[default(GermanBank)]","rule":null}
+,{"name":"risk_one(PolishBank,33,long)","pattern":"risk_one(1,2,3)","provenance":"[risk_one0887762042(GermanBank), risk_one1887762042(GermanBank,PolishBank,33,long)]","rule":"risk_one(C,VL,TL) :- default(X), longTerm(X,C,VL,TL)."}
+,{"name":"total_risk(PolishBank,33)","pattern":"total_risk(1,2)","provenance":"[risk_one(PolishBank,33,long)]","rule":"total_risk(C,E) :- risk_one(C,E,T)."}
+,{"name":"default0252051809(PolishBank,33)","pattern":"default0252051809(1,2)","provenance":"[total_risk(PolishBank,33)]","rule":null}
+,{"name":"risk_one0887762042(DanishCred)","pattern":"risk_one0887762042(1)","provenance":"[default(DanishCred)]","rule":null}
+,{"name":"total_risk(PolishBank,51)","pattern":"total_risk(1,2)","provenance":"[risk_one(PolishBank,18,short)]","rule":"total_risk(C,B) :- risk_one(C,E,T), B=msum(E,<T>)."}
+,{"name":"default0252051809(PolishBank,51)","pattern":"default0252051809(1,2)","provenance":"[total_risk(PolishBank,51)]","rule":null}
+,{"name":"default(PolishBank)","pattern":"default(1)","provenance":"[default0252051809(PolishBank,51), default1252051809(PolishBank,40)]","rule":"default(C) :- total_risk(C,B), finInt(C,R), B>R."}
+,{"name":"risk_one0198717071(PolishBank)","pattern":"risk_one0198717071(1)","provenance":"[default(PolishBank)]","rule":null}
+,{"name":"risk_one(KPC,23,short)","pattern":"risk_one(1,2,3)","provenance":"[risk_one0198717071(PolishBank), risk_one1198717071(PolishBank,KPC,23,short)]","rule":"risk_one(C,VS,TS) :- default(X), shortTerm(X,C,VS,TS)."}
+,{"name":"total_risk(KPC,23)","pattern":"total_risk(1,2)","provenance":"[risk_one(KPC,23,short)]","rule":"total_risk(C,B) :- risk_one(C,E,T), B=msum(E,<T>)."}
+,{"name":"default0252051809(KPC,23)","pattern":"default0252051809(1,2)","provenance":"[total_risk(KPC,23)]","rule":null}
+,{"name":"default(KPC)","pattern":"default(1)","provenance":"[default0252051809(KPC,23), default1252051809(KPC,17)]","rule":"default(C) :- total_risk(C,B), finInt(C,R), B>R."}
+,{"name":"risk_one0198717071(KPC)","pattern":"risk_one0198717071(1)","provenance":"[default(KPC)]","rule":null}
+,{"name":"risk_one0887762042(PolishBank)","pattern":"risk_one0887762042(1)","provenance":"[default(PolishBank)]","rule":null}
+,{"name":"risk_one0887762042(KPC)","pattern":"risk_one0887762042(1)","provenance":"[default(KPC)]","rule":null}
+,{"name":"vatom_10804382532(BankAmerica)","pattern":"vatom_10804382532(1)","provenance":"[default(BankAmerica)]","rule":null}
+,{"name":"vatom_11804382532(BankAmerica,CreditFrance,7,long)","pattern":"vatom_11804382532(1,2,3,4)","provenance":"[longTerm(BankAmerica,CreditFrance,7,long)]","rule":null}
+,{"name":"vatom_1(CreditFrance,long,7,BankAmerica)","pattern":"vatom_1(1,2,3,4)","provenance":"[vatom_10804382532(BankAmerica), vatom_11804382532(BankAmerica,CreditFrance,7,long)]","rule":"vatom_1(C,TL,VL,DL) :- default(DL), longTerm(DL,C,VL,TL)."}
+,{"name":"risk(CreditFrance,7,long)","pattern":"risk(1,2,3)","provenance":"[vatom_1(CreditFrance,long,7,BankAmerica)]","rule":"risk(C,EL,TL) :- vatom_1(C,TL,VL,DL), EL=msum(VL,<DL>)."}
+,{"name":"vatom_11804382532(SpanishBanco,DutchInvest,29,long)","pattern":"vatom_11804382532(1,2,3,4)","provenance":"[longTerm(SpanishBanco,DutchInvest,29,long)]","rule":null}
+,{"name":"vatom_11804382532(CreditFrance,USAplc,39,long)","pattern":"vatom_11804382532(1,2,3,4)","provenance":"[longTerm(CreditFrance,USAplc,39,long)]","rule":null}
+,{"name":"vatom_11804382532(GermanBank,PolishBank,33,long)","pattern":"vatom_11804382532(1,2,3,4)","provenance":"[longTerm(GermanBank,PolishBank,33,long)]","rule":null}
+,{"name":"vatom_10804382532(CreditFrance)","pattern":"vatom_10804382532(1)","provenance":"[default(CreditFrance)]","rule":null}
+,{"name":"vatom_1(USAplc,long,39,CreditFrance)","pattern":"vatom_1(1,2,3,4)","provenance":"[vatom_10804382532(CreditFrance), vatom_11804382532(CreditFrance,USAplc,39,long)]","rule":"vatom_1(C,TL,VL,DL) :- default(DL), longTerm(DL,C,VL,TL)."}
+,{"name":"risk(USAplc,39,long)","pattern":"risk(1,2,3)","provenance":"[vatom_1(USAplc,long,39,CreditFrance)]","rule":"risk(C,EL,TL) :- vatom_1(C,TL,VL,DL), EL=msum(VL,<DL>)."}
+,{"name":"vatom_10804382532(USAplc)","pattern":"vatom_10804382532(1)","provenance":"[default(USAplc)]","rule":null}
+,{"name":"vatom_10804382532(GermanBank)","pattern":"vatom_10804382532(1)","provenance":"[default(GermanBank)]","rule":null}
+,{"name":"vatom_1(PolishBank,long,33,GermanBank)","pattern":"vatom_1(1,2,3,4)","provenance":"[vatom_10804382532(GermanBank), vatom_11804382532(GermanBank,PolishBank,33,long)]","rule":"vatom_1(C,TL,VL,DL) :- default(DL), longTerm(DL,C,VL,TL)."}
+,{"name":"risk(PolishBank,33,long)","pattern":"risk(1,2,3)","provenance":"[vatom_1(PolishBank,long,33,GermanBank)]","rule":"risk(C,EL,TL) :- vatom_1(C,TL,VL,DL), EL=msum(VL,<DL>)."}
+,{"name":"vatom_10804382532(DanishCred)","pattern":"vatom_10804382532(1)","provenance":"[default(DanishCred)]","rule":null}
+,{"name":"vatom_10804382532(PolishBank)","pattern":"vatom_10804382532(1)","provenance":"[default(PolishBank)]","rule":null}
+,{"name":"vatom_10804382532(KPC)","pattern":"vatom_10804382532(1)","provenance":"[default(KPC)]","rule":null}
+,{"name":"vatom_201337598454(BankAmerica)","pattern":"vatom_201337598454(1)","provenance":"[default(BankAmerica)]","rule":null}
+,{"name":"vatom_211337598454(BankAmerica,GermanBank,6,short)","pattern":"vatom_211337598454(1,2,3,4)","provenance":"[shortTerm(BankAmerica,GermanBank,6,short)]","rule":null}
+,{"name":"vatom_2(GermanBank,short,6,BankAmerica)","pattern":"vatom_2(1,2,3,4)","provenance":"[vatom_201337598454(BankAmerica), vatom_211337598454(BankAmerica,GermanBank,6,short)]","rule":"vatom_2(C,TS,VS,DS) :- default(DS), shortTerm(DS,C,VS,TS)."}
+,{"name":"risk(GermanBank,6,short)","pattern":"risk(1,2,3)","provenance":"[vatom_2(GermanBank,short,6,BankAmerica)]","rule":"risk(C,ES,TS) :- vatom_2(C,TS,VS,DS), ES=msum(VS,<DS>)."}
+,{"name":"vatom_211337598454(BankAmerica,ItalyCredit,21,short)","pattern":"vatom_211337598454(1,2,3,4)","provenance":"[shortTerm(BankAmerica,ItalyCredit,21,short)]","rule":null}
+,{"name":"vatom_2(ItalyCredit,short,21,BankAmerica)","pattern":"vatom_2(1,2,3,4)","provenance":"[vatom_201337598454(BankAmerica), vatom_211337598454(BankAmerica,ItalyCredit,21,short)]","rule":"vatom_2(C,TS,VS,DS) :- default(DS), shortTerm(DS,C,VS,TS)."}
+,{"name":"risk(ItalyCredit,21,short)","pattern":"risk(1,2,3)","provenance":"[vatom_2(ItalyCredit,short,21,BankAmerica)]","rule":"risk(C,ES,TS) :- vatom_2(C,TS,VS,DS), ES=msum(VS,<DS>)."}
+,{"name":"vatom_211337598454(SpanishBanco,ItalyCredit,15,short)","pattern":"vatom_211337598454(1,2,3,4)","provenance":"[shortTerm(SpanishBanco,ItalyCredit,15,short)]","rule":null}
+,{"name":"vatom_211337598454(BankAmerica,DutchInvest,26,short)","pattern":"vatom_211337598454(1,2,3,4)","provenance":"[shortTerm(BankAmerica,DutchInvest,26,short)]","rule":null}
+,{"name":"vatom_2(DutchInvest,short,26,BankAmerica)","pattern":"vatom_2(1,2,3,4)","provenance":"[vatom_201337598454(BankAmerica), vatom_211337598454(BankAmerica,DutchInvest,26,short)]","rule":"vatom_2(C,TS,VS,DS) :- default(DS), shortTerm(DS,C,VS,TS)."}
+,{"name":"risk(DutchInvest,26,short)","pattern":"risk(1,2,3)","provenance":"[vatom_2(DutchInvest,short,26,BankAmerica)]","rule":"risk(C,ES,TS) :- vatom_2(C,TS,VS,DS), ES=msum(VS,<DS>)."}
+,{"name":"vatom_211337598454(USAplc,DanishCred,20,short)","pattern":"vatom_211337598454(1,2,3,4)","provenance":"[shortTerm(USAplc,DanishCred,20,short)]","rule":null}
+,{"name":"vatom_211337598454(USAplc,PolishBank,18,short)","pattern":"vatom_211337598454(1,2,3,4)","provenance":"[shortTerm(USAplc,PolishBank,18,short)]","rule":null}
+,{"name":"vatom_211337598454(PolishBank,KPC,23,short)","pattern":"vatom_211337598454(1,2,3,4)","provenance":"[shortTerm(PolishBank,KPC,23,short)]","rule":null}
+,{"name":"vatom_201337598454(CreditFrance)","pattern":"vatom_201337598454(1)","provenance":"[default(CreditFrance)]","rule":null}
+,{"name":"vatom_201337598454(USAplc)","pattern":"vatom_201337598454(1)","provenance":"[default(USAplc)]","rule":null}
+,{"name":"vatom_2(DanishCred,short,20,USAplc)","pattern":"vatom_2(1,2,3,4)","provenance":"[vatom_201337598454(USAplc), vatom_211337598454(USAplc,DanishCred,20,short)]","rule":"vatom_2(C,TS,VS,DS) :- default(DS), shortTerm(DS,C,VS,TS)."}
+,{"name":"risk(DanishCred,20,short)","pattern":"risk(1,2,3)","provenance":"[vatom_2(DanishCred,short,20,USAplc)]","rule":"risk(C,ES,TS) :- vatom_2(C,TS,VS,DS), ES=msum(VS,<DS>)."}
+,{"name":"vatom_2(PolishBank,short,18,USAplc)","pattern":"vatom_2(1,2,3,4)","provenance":"[vatom_201337598454(USAplc), vatom_211337598454(USAplc,PolishBank,18,short)]","rule":"vatom_2(C,TS,VS,DS) :- default(DS), shortTerm(DS,C,VS,TS)."}
+,{"name":"risk(PolishBank,18,short)","pattern":"risk(1,2,3)","provenance":"[vatom_2(PolishBank,short,18,USAplc)]","rule":"risk(C,ES,TS) :- vatom_2(C,TS,VS,DS), ES=msum(VS,<DS>)."}
+,{"name":"vatom_201337598454(GermanBank)","pattern":"vatom_201337598454(1)","provenance":"[default(GermanBank)]","rule":null}
+,{"name":"vatom_201337598454(DanishCred)","pattern":"vatom_201337598454(1)","provenance":"[default(DanishCred)]","rule":null}
+,{"name":"vatom_201337598454(PolishBank)","pattern":"vatom_201337598454(1)","provenance":"[default(PolishBank)]","rule":null}
+,{"name":"vatom_2(KPC,short,23,PolishBank)","pattern":"vatom_2(1,2,3,4)","provenance":"[vatom_201337598454(PolishBank), vatom_211337598454(PolishBank,KPC,23,short)]","rule":"vatom_2(C,TS,VS,DS) :- default(DS), shortTerm(DS,C,VS,TS)."}
+,{"name":"risk(KPC,23,short)","pattern":"risk(1,2,3)","provenance":"[vatom_2(KPC,short,23,PolishBank)]","rule":"risk(C,ES,TS) :- vatom_2(C,TS,VS,DS), ES=msum(VS,<DS>)."}
+,{"name":"vatom_201337598454(KPC)","pattern":"vatom_201337598454(1)","provenance":"[default(KPC)]","rule":null}
+]

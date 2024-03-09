@@ -1,0 +1,5 @@
+[{"sources":"[]","type":"FactInputPlan","atom":"intOwns","plan":"Facts for intOwns"}
+,{"sources":"[Facts for intOwns]","type":"LinearPlan","atom":"closeLink","plan":"closeLink(X,Y) :- intOwns(X,Y,S), S>0.2."}
+,{"sources":"[Facts for intOwns, Facts for intOwns]","type":"JoinPlan","atom":"closeLink","plan":"closeLink(X,Y) :- intOwns(X,Y,S1), intOwns(X,Z,S2), S1>0.2, S2>0.2, Y<>Z."}
+,{"sources":"[closeLink(X,Y) :- intOwns(X,Y,S), S>0.2., closeLink(X,Y) :- intOwns(X,Y,S1), intOwns(X,Z,S2), S1>0.2, S2>0.2, Y<>Z.]","type":"OutputPlan","atom":"closeLink","plan":"closeLink"}
+]

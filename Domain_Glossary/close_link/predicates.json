@@ -1,0 +1,42 @@
+[
+  {
+    "predicate":"intOwns(arg_1,arg_2,arg_3)",
+    "specifics": {
+      "type": "relationship",
+      "terms": [
+        {
+          "name": "arg_1",
+          "type": "entity"
+        },
+        {
+          "name": "arg_2",
+          "type": "entity"
+        },
+        {
+          "name": "arg_3",
+          "type": "value"
+        }
+      ]
+    },
+    "description": "arg_1 holds, directly and indirectly, arg_3 of arg_2's shares",
+    "skip": false
+  },
+  {
+    "predicate":"closeLink(arg_1,arg_2)",
+    "specifics": {
+      "type": "relationship",
+      "terms": [
+        {
+          "name": "arg_1",
+          "type": "entity"
+        },
+        {
+          "name": "arg_2",
+          "type": "entity"
+        }
+      ]
+    },
+    "description": "arg_1 and arg_2 are in a close link relationship",
+    "skip": false
+  }
+]

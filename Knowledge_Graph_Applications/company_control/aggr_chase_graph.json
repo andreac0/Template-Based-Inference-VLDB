@@ -1,0 +1,62 @@
+[{"name":"company(IrishBank)","pattern":"company(1)","provenance":"[]","rule":null}
+,{"name":"control(IrishBank,IrishBank)","pattern":"control(1,1)","provenance":"[company(IrishBank)]","rule":"control(X,X) :- company(X)."}
+,{"name":"company(FrenchPLC)","pattern":"company(1)","provenance":"[]","rule":null}
+,{"name":"control(FrenchPLC,FrenchPLC)","pattern":"control(1,1)","provenance":"[company(FrenchPLC)]","rule":"control(X,X) :- company(X)."}
+,{"name":"company(FondoItaliano)","pattern":"company(1)","provenance":"[]","rule":null}
+,{"name":"control(FondoItaliano,FondoItaliano)","pattern":"control(1,1)","provenance":"[company(FondoItaliano)]","rule":"control(X,X) :- company(X)."}
+,{"name":"company(MadridCredit)","pattern":"company(1)","provenance":"[]","rule":null}
+,{"name":"control(MadridCredit,MadridCredit)","pattern":"control(1,1)","provenance":"[company(MadridCredit)]","rule":"control(X,X) :- company(X)."}
+,{"name":"company(UKPLC)","pattern":"company(1)","provenance":"[]","rule":null}
+,{"name":"control(UKPLC,UKPLC)","pattern":"control(1,1)","provenance":"[company(UKPLC)]","rule":"control(X,X) :- company(X)."}
+,{"name":"control0392202475(IrishBank)","pattern":"control0392202475(1)","provenance":"[company(IrishBank)]","rule":null}
+,{"name":"own(IrishBank,FondoItaliano,83)","pattern":"own(1,2,3)","provenance":"[]","rule":null}
+,{"name":"control1392202475(IrishBank,FondoItaliano,83)","pattern":"control1392202475(1,2,3)","provenance":"[own(IrishBank,FondoItaliano,83)]","rule":null}
+,{"name":"control(IrishBank,FondoItaliano)","pattern":"control(1,2)","provenance":"[control0392202475(IrishBank), control1392202475(IrishBank,FondoItaliano,83)]","rule":"control(X,J) :- company(X), own(X,J,W), W>50."}
+,{"name":"own(IrishBank,FrenchPLC,54)","pattern":"own(1,2,3)","provenance":"[]","rule":null}
+,{"name":"control1392202475(IrishBank,FrenchPLC,54)","pattern":"control1392202475(1,2,3)","provenance":"[own(IrishBank,FrenchPLC,54)]","rule":null}
+,{"name":"control(IrishBank,FrenchPLC)","pattern":"control(1,2)","provenance":"[control0392202475(IrishBank), control1392202475(IrishBank,FrenchPLC,54)]","rule":"control(X,J) :- company(X), own(X,J,W), W>50."}
+,{"name":"own(FrenchPLC,MadridCredit,21)","pattern":"own(1,2,3)","provenance":"[]","rule":null}
+,{"name":"control1392202475(FrenchPLC,MadridCredit,21)","pattern":"control1392202475(1,2,3)","provenance":"[own(FrenchPLC,MadridCredit,21)]","rule":null}
+,{"name":"own(FondoItaliano,MadridCredit,36)","pattern":"own(1,2,3)","provenance":"[]","rule":null}
+,{"name":"control1392202475(FondoItaliano,MadridCredit,36)","pattern":"control1392202475(1,2,3)","provenance":"[own(FondoItaliano,MadridCredit,36)]","rule":null}
+,{"name":"own(FrenchPLC,UKPLC,91)","pattern":"own(1,2,3)","provenance":"[]","rule":null}
+,{"name":"control1392202475(FrenchPLC,UKPLC,91)","pattern":"control1392202475(1,2,3)","provenance":"[own(FrenchPLC,UKPLC,91)]","rule":null}
+,{"name":"control0392202475(FrenchPLC)","pattern":"control0392202475(1)","provenance":"[company(FrenchPLC)]","rule":null}
+,{"name":"control(FrenchPLC,UKPLC)","pattern":"control(1,2)","provenance":"[control0392202475(FrenchPLC), control1392202475(FrenchPLC,UKPLC,91)]","rule":"control(X,J) :- company(X), own(X,J,W), W>50."}
+,{"name":"control0392202475(FondoItaliano)","pattern":"control0392202475(1)","provenance":"[company(FondoItaliano)]","rule":null}
+,{"name":"control0392202475(MadridCredit)","pattern":"control0392202475(1)","provenance":"[company(MadridCredit)]","rule":null}
+,{"name":"control0392202475(UKPLC)","pattern":"control0392202475(1)","provenance":"[company(UKPLC)]","rule":null}
+,{"name":"vatom_101122900822(IrishBank,IrishBank)","pattern":"vatom_101122900822(1,1)","provenance":"[control(IrishBank,IrishBank)]","rule":null}
+,{"name":"vatom_111122900822(IrishBank,FondoItaliano,83)","pattern":"vatom_111122900822(1,2,3)","provenance":"[own(IrishBank,FondoItaliano,83)]","rule":null}
+,{"name":"vatom_1(IrishBank,FondoItaliano,IrishBank,83)","pattern":"vatom_1(1,2,1,3)","provenance":"[vatom_101122900822(IrishBank,IrishBank), vatom_111122900822(IrishBank,FondoItaliano,83)]","rule":"vatom_1(X,Y,Z,K) :- control(X,Z), own(Z,Y,K)."}
+,{"name":"jointcontrol(IrishBank,FondoItaliano,83)","pattern":"jointcontrol(1,2,3)","provenance":"[vatom_1(IrishBank,FondoItaliano,IrishBank,83)]","rule":"jointcontrol(X,Y,TS) :- vatom_1(X,Y,Z,K), TS=msum(K,<Z>)."}
+,{"name":"vatom_111122900822(IrishBank,FrenchPLC,54)","pattern":"vatom_111122900822(1,2,3)","provenance":"[own(IrishBank,FrenchPLC,54)]","rule":null}
+,{"name":"vatom_1(IrishBank,FrenchPLC,IrishBank,54)","pattern":"vatom_1(1,2,1,3)","provenance":"[vatom_101122900822(IrishBank,IrishBank), vatom_111122900822(IrishBank,FrenchPLC,54)]","rule":"vatom_1(X,Y,Z,K) :- control(X,Z), own(Z,Y,K)."}
+,{"name":"jointcontrol(IrishBank,FrenchPLC,54)","pattern":"jointcontrol(1,2,3)","provenance":"[vatom_1(IrishBank,FrenchPLC,IrishBank,54)]","rule":"jointcontrol(X,Y,TS) :- vatom_1(X,Y,Z,K), TS=msum(K,<Z>)."}
+,{"name":"vatom_111122900822(FrenchPLC,MadridCredit,21)","pattern":"vatom_111122900822(1,2,3)","provenance":"[own(FrenchPLC,MadridCredit,21)]","rule":null}
+,{"name":"vatom_111122900822(FondoItaliano,MadridCredit,36)","pattern":"vatom_111122900822(1,2,3)","provenance":"[own(FondoItaliano,MadridCredit,36)]","rule":null}
+,{"name":"vatom_111122900822(FrenchPLC,UKPLC,91)","pattern":"vatom_111122900822(1,2,3)","provenance":"[own(FrenchPLC,UKPLC,91)]","rule":null}
+,{"name":"vatom_101122900822(FrenchPLC,FrenchPLC)","pattern":"vatom_101122900822(1,1)","provenance":"[control(FrenchPLC,FrenchPLC)]","rule":null}
+,{"name":"vatom_1(FrenchPLC,MadridCredit,FrenchPLC,21)","pattern":"vatom_1(1,2,1,3)","provenance":"[vatom_101122900822(FrenchPLC,FrenchPLC), vatom_111122900822(FrenchPLC,MadridCredit,21)]","rule":"vatom_1(X,Y,Z,K) :- control(X,Z), own(Z,Y,K)."}
+,{"name":"jointcontrol(FrenchPLC,MadridCredit,21)","pattern":"jointcontrol(1,2,3)","provenance":"[vatom_1(FrenchPLC,MadridCredit,FrenchPLC,21)]","rule":"jointcontrol(X,Y,TS) :- vatom_1(X,Y,Z,K), TS=msum(K,<Z>)."}
+,{"name":"vatom_1(FrenchPLC,UKPLC,FrenchPLC,91)","pattern":"vatom_1(1,2,1,3)","provenance":"[vatom_101122900822(FrenchPLC,FrenchPLC), vatom_111122900822(FrenchPLC,UKPLC,91)]","rule":"vatom_1(X,Y,Z,K) :- control(X,Z), own(Z,Y,K)."}
+,{"name":"jointcontrol(FrenchPLC,UKPLC,91)","pattern":"jointcontrol(1,2,3)","provenance":"[vatom_1(FrenchPLC,UKPLC,FrenchPLC,91)]","rule":"jointcontrol(X,Y,TS) :- vatom_1(X,Y,Z,K), TS=msum(K,<Z>)."}
+,{"name":"vatom_101122900822(FondoItaliano,FondoItaliano)","pattern":"vatom_101122900822(1,1)","provenance":"[control(FondoItaliano,FondoItaliano)]","rule":null}
+,{"name":"vatom_1(FondoItaliano,MadridCredit,FondoItaliano,36)","pattern":"vatom_1(1,2,1,3)","provenance":"[vatom_101122900822(FondoItaliano,FondoItaliano), vatom_111122900822(FondoItaliano,MadridCredit,36)]","rule":"vatom_1(X,Y,Z,K) :- control(X,Z), own(Z,Y,K)."}
+,{"name":"jointcontrol(FondoItaliano,MadridCredit,36)","pattern":"jointcontrol(1,2,3)","provenance":"[vatom_1(FondoItaliano,MadridCredit,FondoItaliano,36)]","rule":"jointcontrol(X,Y,TS) :- vatom_1(X,Y,Z,K), TS=msum(K,<Z>)."}
+,{"name":"vatom_101122900822(MadridCredit,MadridCredit)","pattern":"vatom_101122900822(1,1)","provenance":"[control(MadridCredit,MadridCredit)]","rule":null}
+,{"name":"vatom_101122900822(UKPLC,UKPLC)","pattern":"vatom_101122900822(1,1)","provenance":"[control(UKPLC,UKPLC)]","rule":null}
+,{"name":"vatom_101122900822(IrishBank,FondoItaliano)","pattern":"vatom_101122900822(1,2)","provenance":"[control(IrishBank,FondoItaliano)]","rule":null}
+,{"name":"vatom_1(IrishBank,MadridCredit,FondoItaliano,36)","pattern":"vatom_1(1,2,3,4)","provenance":"[vatom_101122900822(IrishBank,FondoItaliano), vatom_111122900822(FondoItaliano,MadridCredit,36)]","rule":"vatom_1(X,Y,Z,K) :- control(X,Z), own(Z,Y,K)."}
+,{"name":"jointcontrol(IrishBank,MadridCredit,36)","pattern":"jointcontrol(1,2,3)","provenance":"[vatom_1(IrishBank,MadridCredit,FondoItaliano,36)]","rule":"jointcontrol(X,Y,TS) :- vatom_1(X,Y,Z,K), TS=msum(K,<Z>)."}
+,{"name":"vatom_101122900822(IrishBank,FrenchPLC)","pattern":"vatom_101122900822(1,2)","provenance":"[control(IrishBank,FrenchPLC)]","rule":null}
+,{"name":"vatom_1(IrishBank,MadridCredit,FrenchPLC,21)","pattern":"vatom_1(1,2,3,4)","provenance":"[vatom_101122900822(IrishBank,FrenchPLC), vatom_111122900822(FrenchPLC,MadridCredit,21)]","rule":"vatom_1(X,Y,Z,K) :- control(X,Z), own(Z,Y,K)."}
+,{"name":"jointcontrol(IrishBank,MadridCredit,57)","pattern":"jointcontrol(1,2,3)","provenance":"[vatom_1(IrishBank,MadridCredit,FrenchPLC,21), vatom_1(IrishBank,MadridCredit,FondoItaliano,36)]","rule":"jointcontrol(X,Y,TS) :- vatom_1(X,Y,Z,K), TS=msum(K,<Z>)."}
+,{"name":"control(IrishBank,MadridCredit)","pattern":"control(1,2)","provenance":"[jointcontrol(IrishBank,MadridCredit,57)]","rule":"control(X,Y) :- jointcontrol(X,Y,TS), TS>50."}
+,{"name":"vatom_1(IrishBank,UKPLC,FrenchPLC,91)","pattern":"vatom_1(1,2,3,4)","provenance":"[vatom_101122900822(IrishBank,FrenchPLC), vatom_111122900822(FrenchPLC,UKPLC,91)]","rule":"vatom_1(X,Y,Z,K) :- control(X,Z), own(Z,Y,K)."}
+,{"name":"jointcontrol(IrishBank,UKPLC,91)","pattern":"jointcontrol(1,2,3)","provenance":"[vatom_1(IrishBank,UKPLC,FrenchPLC,91)]","rule":"jointcontrol(X,Y,TS) :- vatom_1(X,Y,Z,K), TS=msum(K,<Z>)."}
+,{"name":"control(IrishBank,UKPLC)","pattern":"control(1,2)","provenance":"[jointcontrol(IrishBank,UKPLC,91)]","rule":"control(X,Y) :- jointcontrol(X,Y,TS), TS>50."}
+,{"name":"vatom_101122900822(FrenchPLC,UKPLC)","pattern":"vatom_101122900822(1,2)","provenance":"[control(FrenchPLC,UKPLC)]","rule":null}
+,{"name":"vatom_101122900822(IrishBank,MadridCredit)","pattern":"vatom_101122900822(1,2)","provenance":"[control(IrishBank,MadridCredit)]","rule":null}
+,{"name":"vatom_101122900822(IrishBank,UKPLC)","pattern":"vatom_101122900822(1,2)","provenance":"[control(IrishBank,UKPLC)]","rule":null}
+]

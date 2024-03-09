@@ -1,0 +1,225 @@
+
+[  
+  {
+  "predicate":"company(arg_1)",
+  "specifics": {
+    "type": "relationship",
+    "terms": [
+      {
+        "name": "arg_1",
+        "type": "entity"
+      }
+    ]
+  },
+  "description": "arg_1 is a company",
+  "skip": false
+},
+{
+  "predicate":"own(arg_1,arg_2,arg_3)",
+  "specifics": {
+    "type": "relationship",
+    "terms": [
+      {
+        "name": "arg_1",
+        "type": "entity"
+      },
+      {
+        "name": "arg_2",
+        "type": "entity"
+      },
+      {
+        "name": "arg_3",
+        "type": "value"
+      }
+    ]
+  },
+  "description": "arg_2 owns arg_3 of arg_1's shares",
+  "skip": false
+},
+{
+  "predicate":"jointcontrol(arg_1,arg_2,arg_3)",
+  "specifics": {
+    "type": "relationship",
+    "terms": [
+      {
+        "name": "arg_1",
+        "type": "entity"
+      },
+      {
+        "name": "arg_2",
+        "type": "entity"
+      },
+      {
+        "name": "arg_3",
+        "type": "value"
+      }
+    ]
+  },
+  "description": "arg_1 owns a combined total of arg_3 of arg_2's shares",
+  "skip": false
+},
+  {
+    "predicate":"target(arg_1)",
+    "specifics": {
+      "type": "relationship",
+      "terms": [
+          {
+            "name": "arg_1",
+            "type": "entity"
+          }
+      ]
+    },
+    "description": "arg_1 is a target of interest",
+    "skip": false
+  },
+  {
+    "predicate":"relevant_owns(arg_1,arg_2,arg_3)",
+    "specifics": {
+      "type": "relationship",
+      "terms": [
+        {
+          "name": "arg_1",
+          "type": "entity"
+        },
+        {
+          "name": "arg_2",
+          "type": "entity"
+        },
+        {
+          "name": "arg_3",
+          "type": "value"
+        }
+      ]
+    },
+    "description": "the ownership of arg_3 of arg_2's shares by arg_1 is relevant",
+    "skip": false
+  },
+  {
+    "predicate":"controlled_shares(arg_1,arg_2,arg_3,arg_4)",
+    "specifics": {
+      "type": "relationship",
+      "terms": [
+        {
+          "name": "arg_1",
+          "type": "entity"
+        },
+        {
+          "name": "arg_2",
+          "type": "entity"
+        },
+        {
+          "name": "arg_3",
+          "type": "entity"
+        },
+        {
+          "name": "arg_4",
+          "type": "value"
+        }
+      ]
+    },
+    "description": "arg_1 controls arg_4 of arg_2's shares via arg_3",
+    "skip": false
+  },
+  {
+    "predicate":"control(arg_1,arg_2)",
+    "specifics": {
+      "type": "relationship",
+      "terms": [
+        {
+          "name": "arg_1",
+          "type": "entity"
+        },
+        {
+          "name": "arg_2",
+          "type": "entity"
+        }
+      ]
+    },
+    "description": "arg_1 controls arg_2",
+    "skip": false
+  },
+  {
+    "predicate":"total_controlled_shares(arg_1,arg_2,arg_3)",
+    "specifics": {
+      "type": "relationship",
+      "terms": [
+        {
+          "name": "arg_1",
+          "type": "entity"
+        },
+        {
+          "name": "arg_2",
+          "type": "entity"
+        },
+        {
+          "name": "arg_4",
+          "type": "value"
+        }
+      ]
+    },
+    "description": "arg_1 controls a total arg_3 of arg_2's shares",
+    "skip": false
+  },
+  {
+    "predicate":"controls(arg_1,arg_2)",
+    "specifics": {
+      "type": "relationship",
+      "terms": [
+        {
+          "name": "arg_1",
+          "type": "entity"
+        },
+        {
+          "name": "arg_2",
+          "type": "entity"
+        }
+      ]
+    },
+    "description": "arg_1 controls arg_2",
+    "skip": false
+  },
+  {
+    "predicate":"owns_db(arg_1,arg_2,arg_3,arg_4)",
+    "specifics": {
+      "type": "relationship",
+      "terms": [
+        {
+          "name": "arg_1",
+          "type": "entity"
+        },
+        {
+          "name": "arg_2",
+          "type": "entity"
+        },
+        {
+          "name": "arg_3",
+          "type": "value"
+        },
+        {
+          "name": "arg_4",
+          "type": "value"
+        }
+      ]
+    },
+    "description": "XXXXX",
+    "skip": true
+  },
+  {
+    "predicate":"owns_custom_deleted(arg_1,arg_2)",
+    "specifics": {
+      "type": "relationship",
+      "terms": [
+        {
+          "name": "arg_1",
+          "type": "value"
+        },
+        {
+          "name": "arg_2",
+          "type": "value"
+        }
+      ]
+    },
+    "description": "XXXXX",
+    "skip": true
+  }
+]
