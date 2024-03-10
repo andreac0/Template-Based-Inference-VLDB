@@ -1,0 +1,153 @@
+
+[  
+  {
+  "predicate":"shock(arg_1, arg_2)",
+  "specifics": {
+    "type": "relationship",
+    "terms": [
+      {
+        "name": "arg_1",
+        "type": "entity"
+      },
+      {
+        "name": "arg_2",
+        "type": "value"
+      }
+    ]
+  },
+  "description": "arg_1 suffers a shock amounting to arg_2 euros",
+  "skip": false
+},
+{
+  "predicate":"finInt(arg_1,arg_2)",
+  "specifics": {
+    "type": "relationship",
+    "terms": [
+      {
+        "name": "arg_1",
+        "type": "entity"
+      },
+      {
+        "name": "arg_2",
+        "type": "value"
+      }
+    ]
+  },
+  "description": "arg_1 has a capital of arg_2 euros",
+  "skip": false
+},
+{
+  "predicate":"longTerm(arg_1,arg_2,arg_3,arg_4)",
+  "specifics": {
+    "type": "relationship",
+    "terms": [
+      {
+        "name": "arg_1",
+        "type": "entity"
+      },
+      {
+        "name": "arg_2",
+        "type": "entity"
+      },
+      {
+        "name": "arg_3",
+        "type": "value"
+      },
+      {
+        "name": "arg_4",
+        "type": "value"
+      }
+    ]
+  },
+  "description": "arg_1 has arg_3 euros of long-term debts with arg_2",
+  "skip": false
+},
+{
+  "predicate":"shortTerm(arg_1,arg_2,arg_3,arg_4)",
+  "specifics": {
+    "type": "relationship",
+    "terms": [
+      {
+        "name": "arg_1",
+        "type": "entity"
+      },
+      {
+        "name": "arg_2",
+        "type": "entity"
+      },
+      {
+        "name": "arg_3",
+        "type": "value"
+      },
+      {
+        "name": "arg_4",
+        "type": "value"
+      }
+    ]
+  },
+  "description": "arg_1 has arg_3 euros of short-term debts with arg_2",
+  "skip": false
+},
+  {
+    "predicate":"risk_one(arg_1,arg_2,arg_3)",
+    "specifics": {
+      "type": "relationship",
+      "terms": [
+          {
+            "name": "arg_1",
+            "type": "entity"
+          },
+          {
+            "name": "arg_2",
+            "type": "entity"
+          },
+          {
+            "name": "arg_3",
+            "type": "value"
+          }
+      ]
+    },
+    "description": "arg_1 is at risk of defaulting given its arg_3 - term debts of arg_2 euros of exposures to defaulted debtors",
+    "skip": false
+  },
+  {
+    "predicate":"risk(arg_1,arg_2,arg_3)",
+    "specifics": {
+      "type": "relationship",
+      "terms": [
+          {
+            "name": "arg_1",
+            "type": "entity"
+          },
+          {
+            "name": "arg_2",
+            "type": "entity"
+          },
+          {
+            "name": "arg_3",
+            "type": "value"
+          }
+      ]
+    },
+    "description": "arg_1 is at risk of defaulting given its arg_3 - term debts of arg_2 euros of exposures to defaulted debtors",
+    "skip": false
+  },
+  {
+    "predicate":"total_risk(arg_1,arg_2)",
+    "specifics": {
+      "type": "relationship",
+      "terms": [
+        {
+          "name": "arg_1",
+          "type": "entity"
+        },
+        {
+          "name": "arg_2",
+          "type": "value"
+        }
+      ]
+    },
+    "description": "arg_1 has arg_2 total debt",
+    "skip": false
+  }
+]
