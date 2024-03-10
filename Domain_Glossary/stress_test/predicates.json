@@ -1,7 +1,7 @@
 
 [  
   {
-  "predicate":"shock(arg_1, arg_2)",
+  "predicate":"shock(arg_1,arg_2)",
   "specifics": {
     "type": "relationship",
     "terms": [
@@ -148,6 +148,21 @@
       ]
     },
     "description": "arg_1 has arg_2 total debt",
+    "skip": false
+  },
+  
+  {
+    "predicate":"default(arg_1)",
+    "specifics": {
+      "type": "relationship",
+      "terms": [
+        {
+          "name": "arg_1",
+          "type": "entity"
+        }
+      ]
+    },
+    "description": "arg_1 is in default",
     "skip": false
   }
 ]

@@ -1,0 +1,10 @@
+[{"sentence":"\"BankAmerica\" suffers a shock amounting to 15 euros.","number":["1"],"derived_fact":"shock(BankAmerica,15)","type":"extensional","body_atoms":""}
+,{"sentence":"\"BankAmerica\" has a capital of 5 euros.","number":["3"],"derived_fact":"finInt(BankAmerica,5)","type":"extensional","body_atoms":""}
+,{"sentence":"\"CreditFrance\" has a capital of 3 euros.","number":["6"],"derived_fact":"finInt(CreditFrance,3)","type":"extensional","body_atoms":""}
+,{"sentence":"\"GermanBank\" has a capital of 4 euros.","number":["9"],"derived_fact":"finInt(GermanBank,4)","type":"extensional","body_atoms":""}
+,{"sentence":"\"ItalyCredit\" has a capital of 30 euros.","number":["12"],"derived_fact":"finInt(ItalyCredit,30)","type":"extensional","body_atoms":""}
+,{"sentence":"\"DutchInvest\" has a capital of 47 euros.","number":["15"],"derived_fact":"finInt(DutchInvest,47)","type":"extensional","body_atoms":""}
+,{"sentence":"\"USAplc\" has a capital of 34 euros.","number":["18"],"derived_fact":"finInt(USAplc,34)","type":"extensional","body_atoms":""}
+,{"sentence":"\"DanishCred\" has a capital of 16 euros.","number":["21"],"derived_fact":"finInt(DanishCred,16)","type":"extensional","body_atoms":""}
+,{"sentence":"\"PolishBank\" has a capital of 40 euros.","number":["24"],"derived_fact":"finInt(PolishBank,40)","type":"extensional","body_atoms":""}
+,{"sentence":"\"KPC\" has a capital of 17 euros.","number":["27"],"derived_fact":"finInt(KPC,17)","type":"extensional","body_atoms":""}

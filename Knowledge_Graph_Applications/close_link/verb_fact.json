@@ -1,3 +1,0 @@
-[{"Verb_rule":"\"IkenLTD\" holds, directly and indirectly, 0.67 of \"FendilFS\"'s shares.","atom":"intOwns(IkenLTD,FendilFS,0.67)","body":""}
-,{"Verb_rule":"Since \"IkenLTD\" holds, directly and indirectly, 0.67 of \"FendilFS\"'s shares, and 0.67 is over 0.2, then \"IkenLTD\" and \"FendilFS\" are in a close link relationship.","atom":"closeLink(IkenLTD,FendilFS)","body":"intOwns(IkenLTD,FendilFS,0.67),0.67>0.2"}
-,{"Verb_rule":"Since \"IkenLTD\" and \"FendilFS\" are in a close link relationship, then \"FendilFS\" and \"IkenLTD\" are in a close link relationship.","atom":"closeLink(FendilFS,IkenLTD)","body":"closeLink(IkenLTD,FendilFS)"}]
