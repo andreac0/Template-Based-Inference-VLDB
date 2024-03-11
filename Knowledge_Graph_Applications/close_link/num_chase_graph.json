@@ -8,19 +8,18 @@
 ,{"name":"closeLink(IkenLTD,DomusRTE)","pattern":"closeLink(1,2)","provenance":"[intOwns(IkenLTD,DomusRTE,0.26)]","rule":"closeLink(X,Y) :- intOwns(X,Y,S), S>0.2.","number":["13.1"]}
 ,{"name":"intOwns(IkenLTD,FendilFS,0.67)","pattern":"intOwns(1,2,3)","provenance":"[]","rule":null,"number":["17"]}
 ,{"name":"closeLink(IkenLTD,FendilFS)","pattern":"closeLink(1,2)","provenance":"[intOwns(IkenLTD,FendilFS,0.67)]","rule":"closeLink(X,Y) :- intOwns(X,Y,S), S>0.2.","number":["17.1"]}
-,{"name":"closeLink01095930377(NorwayCredit,STOXplc,0.47)","pattern":"closeLink01095930377(1,2,3)","provenance":"[intOwns(NorwayCredit,STOXplc,0.47)]","rule":null,"number":["2"]}
-,{"name":"closeLink11095930377(NorwayCredit,STOXplc,0.47)","pattern":"closeLink11095930377(1,2,3)","provenance":"[intOwns(NorwayCredit,STOXplc,0.47)]","rule":null,"number":["3"]}
-,{"name":"closeLink11095930377(STOXplc,KLM,0.32)","pattern":"closeLink11095930377(1,2,3)","provenance":"[intOwns(STOXplc,KLM,0.32)]","rule":null,"number":["6"]}
-,{"name":"closeLink11095930377(NorwayCredit,IkenLTD,0.34)","pattern":"closeLink11095930377(1,2,3)","provenance":"[intOwns(NorwayCredit,IkenLTD,0.34)]","rule":null,"number":["10"]}
-,{"name":"closeLink11095930377(IkenLTD,DomusRTE,0.26)","pattern":"closeLink11095930377(1,2,3)","provenance":"[intOwns(IkenLTD,DomusRTE,0.26)]","rule":null,"number":["14"]}
-,{"name":"closeLink11095930377(IkenLTD,FendilFS,0.67)","pattern":"closeLink11095930377(1,2,3)","provenance":"[intOwns(IkenLTD,FendilFS,0.67)]","rule":null,"number":["18"]}
-,{"name":"closeLink01095930377(STOXplc,KLM,0.32)","pattern":"closeLink01095930377(1,2,3)","provenance":"[intOwns(STOXplc,KLM,0.32)]","rule":null,"number":["7"]}
-,{"name":"closeLink01095930377(NorwayCredit,IkenLTD,0.34)","pattern":"closeLink01095930377(1,2,3)","provenance":"[intOwns(NorwayCredit,IkenLTD,0.34)]","rule":null,"number":["11"]}
-,{"name":"closeLink01095930377(IkenLTD,DomusRTE,0.26)","pattern":"closeLink01095930377(1,2,3)","provenance":"[intOwns(IkenLTD,DomusRTE,0.26)]","rule":null,"number":["15"]}
-,{"name":"closeLink01095930377(IkenLTD,FendilFS,0.67)","pattern":"closeLink01095930377(1,2,3)","provenance":"[intOwns(IkenLTD,FendilFS,0.67)]","rule":null,"number":["19"]}
-,{"name":"closeLink(STOXplc,NorwayCredit)","pattern":"closeLink(1,2)","provenance":"[closeLink(NorwayCredit,STOXplc)]","rule":"closeLink(Y,X) :- closeLink(X,Y).","number":["1.1.1"]}
-,{"name":"closeLink(KLM,STOXplc)","pattern":"closeLink(1,2)","provenance":"[closeLink(STOXplc,KLM)]","rule":"closeLink(Y,X) :- closeLink(X,Y).","number":["5.1.1"]}
-,{"name":"closeLink(IkenLTD,NorwayCredit)","pattern":"closeLink(1,2)","provenance":"[closeLink(NorwayCredit,IkenLTD)]","rule":"closeLink(Y,X) :- closeLink(X,Y).","number":["9.1.1"]}
-,{"name":"closeLink(DomusRTE,IkenLTD)","pattern":"closeLink(1,2)","provenance":"[closeLink(IkenLTD,DomusRTE)]","rule":"closeLink(Y,X) :- closeLink(X,Y).","number":["13.1.1"]}
-,{"name":"closeLink(FendilFS,IkenLTD)","pattern":"closeLink(1,2)","provenance":"[closeLink(IkenLTD,FendilFS)]","rule":"closeLink(Y,X) :- closeLink(X,Y).","number":["17.1.1"]}
+,{"name":"closeLink01485441171(NorwayCredit,STOXplc,0.47)","pattern":"closeLink01485441171(1,2,3)","provenance":"[intOwns(NorwayCredit,STOXplc,0.47)]","rule":null,"number":["2"]}
+,{"name":"closeLink11485441171(NorwayCredit,STOXplc,0.47)","pattern":"closeLink11485441171(1,2,3)","provenance":"[intOwns(NorwayCredit,STOXplc,0.47)]","rule":null,"number":["3"]}
+,{"name":"closeLink11485441171(STOXplc,KLM,0.32)","pattern":"closeLink11485441171(1,2,3)","provenance":"[intOwns(STOXplc,KLM,0.32)]","rule":null,"number":["6"]}
+,{"name":"closeLink11485441171(NorwayCredit,IkenLTD,0.34)","pattern":"closeLink11485441171(1,2,3)","provenance":"[intOwns(NorwayCredit,IkenLTD,0.34)]","rule":null,"number":["10"]}
+,{"name":"closeLink(STOXplc,IkenLTD)","pattern":"closeLink(1,2)","provenance":"[closeLink01485441171(NorwayCredit,STOXplc,0.47), closeLink11485441171(NorwayCredit,IkenLTD,0.34)]","rule":"closeLink(Y,Z) :- intOwns(X,Y,S1), intOwns(X,Z,S2), S1>0.2, S2>0.2, Y<>Z.","number":["2.1","10.1"]}
+,{"name":"closeLink11485441171(IkenLTD,DomusRTE,0.26)","pattern":"closeLink11485441171(1,2,3)","provenance":"[intOwns(IkenLTD,DomusRTE,0.26)]","rule":null,"number":["14"]}
+,{"name":"closeLink11485441171(IkenLTD,FendilFS,0.67)","pattern":"closeLink11485441171(1,2,3)","provenance":"[intOwns(IkenLTD,FendilFS,0.67)]","rule":null,"number":["18"]}
+,{"name":"closeLink01485441171(STOXplc,KLM,0.32)","pattern":"closeLink01485441171(1,2,3)","provenance":"[intOwns(STOXplc,KLM,0.32)]","rule":null,"number":["7"]}
+,{"name":"closeLink01485441171(NorwayCredit,IkenLTD,0.34)","pattern":"closeLink01485441171(1,2,3)","provenance":"[intOwns(NorwayCredit,IkenLTD,0.34)]","rule":null,"number":["11"]}
+,{"name":"closeLink(IkenLTD,STOXplc)","pattern":"closeLink(1,2)","provenance":"[closeLink01485441171(NorwayCredit,IkenLTD,0.34), closeLink11485441171(NorwayCredit,STOXplc,0.47)]","rule":"closeLink(Y,Z) :- intOwns(X,Y,S1), intOwns(X,Z,S2), S1>0.2, S2>0.2, Y<>Z.","number":["3.1","11.1"]}
+,{"name":"closeLink01485441171(IkenLTD,DomusRTE,0.26)","pattern":"closeLink01485441171(1,2,3)","provenance":"[intOwns(IkenLTD,DomusRTE,0.26)]","rule":null,"number":["15"]}
+,{"name":"closeLink(DomusRTE,FendilFS)","pattern":"closeLink(1,2)","provenance":"[closeLink01485441171(IkenLTD,DomusRTE,0.26), closeLink11485441171(IkenLTD,FendilFS,0.67)]","rule":"closeLink(Y,Z) :- intOwns(X,Y,S1), intOwns(X,Z,S2), S1>0.2, S2>0.2, Y<>Z.","number":["15.1","18.1"]}
+,{"name":"closeLink01485441171(IkenLTD,FendilFS,0.67)","pattern":"closeLink01485441171(1,2,3)","provenance":"[intOwns(IkenLTD,FendilFS,0.67)]","rule":null,"number":["19"]}
+,{"name":"closeLink(FendilFS,DomusRTE)","pattern":"closeLink(1,2)","provenance":"[closeLink01485441171(IkenLTD,FendilFS,0.67), closeLink11485441171(IkenLTD,DomusRTE,0.26)]","rule":"closeLink(Y,Z) :- intOwns(X,Y,S1), intOwns(X,Z,S2), S1>0.2, S2>0.2, Y<>Z.","number":["14.1","19.1"]}
 ]

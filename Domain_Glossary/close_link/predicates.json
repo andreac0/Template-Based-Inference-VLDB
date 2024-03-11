@@ -18,7 +18,7 @@
         }
       ]
     },
-    "description": "arg_1 holds, directly and indirectly, arg_3 of arg_2's shares",
+    "description": "arg_1 holds arg_3 of arg_2's integrated shares",
     "skip": false
   },
   {
